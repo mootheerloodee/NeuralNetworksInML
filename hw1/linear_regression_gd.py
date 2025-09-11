@@ -37,10 +37,11 @@ class LinearRegressorGD:
             X (np.ndarray): Матрица признаков размера (n_samples, n_features)
             y (np.ndarray): Вектор таргета длины n_samples
         """
+        X = np.asarray(X, dtype="float64")
+        y = np.asarray(y, dtype="float64").reshape(-1)
         n_objects, n_features = X.shape
-        self.coef_ = np.zeros(n_features, dtype = 'float64')
-        self.intercept_ = 0
-        y = y.ravel() if len(y.shape) > 1 else y
+        self.coef_ = np.random.normal(0, 0.01, n_features)
+        self.intercept_ = np.random.normal(0, 0.01)
         for i in range(self.n_iter):
             y_predict = self.predict(X)
             error = y_predict - y
@@ -60,6 +61,7 @@ class LinearRegressorGD:
         Возвращает:
             np.ndarray: Предсказание для каждого элемента из X
         """
+        X = np.asarray(X, dtype="float64")
         return np.dot(X, self.coef_) + self.intercept_
 
     def get_params(self):
