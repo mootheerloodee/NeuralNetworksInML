@@ -15,6 +15,10 @@ __pycache__/
 
 #MNIST
 hw2/MNIST/
+hw3/mnist/
 
 #hw1 (done)
-#hw1/
+hw1/
+
+#hw2 (done)
+hw2/
