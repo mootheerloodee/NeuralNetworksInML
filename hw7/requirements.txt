@@ -1,0 +1,11 @@
+torch==2.8.0
+torchvision==0.23.0
+pytorch-lightning==2.5.5
+pytorch-metric-learning==2.9.0
+grad-cam==1.5.5
+opencv-python==4.12.0.88
+albumentations==2.0.8
+numpy==2.2.6
+scikit-learn==1.7.2
+faiss-cpu==1.12.0
+tqdm==4.67.1
